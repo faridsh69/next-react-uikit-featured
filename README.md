@@ -1,6 +1,6 @@
-# How to become a full stack developer,
+# Enterprice boilerplate NextJs project,
 
-here is my youtube link to this series
+here is my youtube link to introduce this codebase
 
 https://youtu.be/u8Pbt8evCHw
 
