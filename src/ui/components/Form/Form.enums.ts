@@ -11,5 +11,6 @@ export enum InputComponentsEnum {
   Uploader = 'uploader',
   Chips = 'chips',
   Editor = 'editor',
+  Group = 'group',
   Custom = 'custom',
 }

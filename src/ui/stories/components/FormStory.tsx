@@ -21,6 +21,8 @@ export const FormStory = () => {
     job: 'IT',
     role: '',
     accept_term_and_conditions: ['accept'],
+    email: 'Dear customer manager, ....',
+    family: [{ first_name: 'Farid', last_name: 'Shahidi' }],
   })
 
   const TEST_SCHEMA: FormSchemaType = SCHEMAS.wrapper({
@@ -118,9 +120,30 @@ export const FormStory = () => {
       component: InputComponentsEnum.Toggle,
     },
     {
-      name: 'Email content',
+      name: 'email',
       columns: 12,
       component: InputComponentsEnum.Editor,
+    },
+    {
+      name: 'family',
+      label: 'Add new family members',
+      noItemsLabel: 'No family member added yet',
+      columns: 12,
+      component: InputComponentsEnum.Group,
+      inputs: [
+        {
+          name: 'first_name',
+          label: 'First name',
+          columns: 6,
+          component: InputComponentsEnum.Text,
+        },
+        {
+          name: 'last_name',
+          label: 'Last name',
+          columns: 6,
+          component: InputComponentsEnum.Text,
+        },
+      ],
     },
   ]
 

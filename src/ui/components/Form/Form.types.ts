@@ -41,6 +41,13 @@ type CustomProps = {
   ControllerComponent: FC<InputControllerProps>
 }
 
+type GroupProps = {
+  inputs: FormInput[]
+  noItemsLabel?: string
+  disabled?: boolean
+  hiddenInputLabelsBasedOnIndex?: (index: number) => string[]
+}
+
 export type FormInput =
   | ({ component: InputComponentsEnum.Text } & CommonInputProps &
       TextInputProps & {
@@ -57,6 +64,7 @@ export type FormInput =
   | ({ component: InputComponentsEnum.Select } & CommonInputProps & SelectProps)
   | ({ component: InputComponentsEnum.Date } & CommonInputProps & DatepickerProps)
   | ({ component: InputComponentsEnum.Rating } & CommonInputProps & RatingProps)
+  | ({ component: InputComponentsEnum.Group } & CommonInputProps & GroupProps)
   | ({ component: InputComponentsEnum.Uploader } & CommonInputProps)
   | ({ component: InputComponentsEnum.Custom } & CommonInputProps & CustomProps)
   | ({ component: InputComponentsEnum.Editor } & CommonInputProps)
