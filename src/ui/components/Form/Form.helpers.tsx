@@ -3,6 +3,7 @@ import { ChecklistController } from './Controllers/ChecklistController'
 import { ChipsController } from './Controllers/ChipsController'
 import { CustomController } from './Controllers/CustomComponentController'
 import { DateController } from './Controllers/DateController'
+import { EditorController } from './Controllers/EditorController'
 import { RadioController } from './Controllers/RadioController'
 import { RatingController } from './Controllers/RatingController'
 import { SelectController } from './Controllers/SelectController'
@@ -25,6 +26,7 @@ export const getInputController = (component?: InputComponentsEnum) => {
     [InputComponentsEnum.Rating]: RatingController,
     [InputComponentsEnum.Uploader]: UploaderController,
     [InputComponentsEnum.Chips]: ChipsController,
+    [InputComponentsEnum.Editor]: EditorController,
     [InputComponentsEnum.Custom]: CustomController,
   }
 

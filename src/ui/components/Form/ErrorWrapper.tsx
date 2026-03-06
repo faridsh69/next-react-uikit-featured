@@ -8,7 +8,7 @@ import styles from './Form.module.scss'
 export const ErrorWrapper = (props: inputWrapperProps) => {
   const { children, error } = props
 
-  const errorMessage = getFirstLetterUpperCases(error?.message as string)
+  const errorMessage = getFirstLetterUpperCases(error?.message as string).replace('_', ' ')
 
   return (
     <div className={styles.inputWrapper}>

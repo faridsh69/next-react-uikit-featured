@@ -10,5 +10,6 @@ export enum InputComponentsEnum {
   Rating = 'rating',
   Uploader = 'uploader',
   Chips = 'chips',
+  Editor = 'editor',
   Custom = 'custom',
 }

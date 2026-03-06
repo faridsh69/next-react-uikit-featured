@@ -59,6 +59,7 @@ export type FormInput =
   | ({ component: InputComponentsEnum.Rating } & CommonInputProps & RatingProps)
   | ({ component: InputComponentsEnum.Uploader } & CommonInputProps)
   | ({ component: InputComponentsEnum.Custom } & CommonInputProps & CustomProps)
+  | ({ component: InputComponentsEnum.Editor } & CommonInputProps)
 
 export type FormSchemaType = yup.ObjectSchema<any>
 

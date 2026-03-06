@@ -54,19 +54,25 @@ $gutter: 20px;
 }
 
 @mixin _generate-col-set($prefix: null) {
-  .col#{if($prefix, '-#{$prefix}', '')} {
+  $suffix: '';
+
+  @if $prefix {
+    $suffix: '-#{$prefix}';
+  }
+
+  .col#{$suffix} {
     flex: 1 0 0;
     max-width: 100%;
   }
 
-  .col#{if($prefix, '-#{$prefix}', '')}-auto {
+  .col#{$suffix}-auto {
     flex: 0 0 auto;
     width: auto;
     max-width: none;
   }
 
   @for $i from 0 through $grid-columns {
-    .col#{if($prefix, '-#{$prefix}', '')}-#{$i} {
+    .col#{$suffix}-#{$i} {
       @include make-col($i);
     }
   }

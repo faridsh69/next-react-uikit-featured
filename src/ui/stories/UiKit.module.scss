@@ -1,5 +1,4 @@
 .story {
-  margin-top: 50px;
   width: 90%;
   display: flex;
   flex-direction: column;
@@ -20,11 +19,6 @@
     border-radius: 4px;
     line-height: 1.5;
   }
-
-  // @include theme.respond-to(xl, max) {
-  //   width: 100%;
-  //   padding: 10px;
-  // }
 }
 
 .selects {

@@ -117,11 +117,11 @@ export const FormStory = () => {
       columns: 6,
       component: InputComponentsEnum.Toggle,
     },
-    // {
-    //   name: 'has_disablity?',
-    //   columns: 3,
-    //   component: InputComponentsEnum.Checkbox,
-    // },
+    {
+      name: 'Email content',
+      columns: 12,
+      component: InputComponentsEnum.Editor,
+    },
   ]
 
   return (
@@ -146,7 +146,7 @@ export const FormStory = () => {
           defaultValues={formData}
           onChangeInput={onChangeInput}
           setIsValid={setIsValid}
-          showErrorOnMount={false}
+          showErrorOnMount={true}
           showValidationBar={false}
         />
         <div style={{ float: 'right' }}>
