@@ -22,18 +22,19 @@ export const LoginModal = () => {
   const { createMutation: checkEmailMutation } = useCrudAuthUserEmailAvailability()
 
   const handleCheckEmail = () => {
-    setAuthModal(p => ({ ...p, step: AUTH_STEPS.checkEmail }))
+    setAuthModal(p => ({ ...p, step: AUTH_STEPS.login }))
+    // setAuthModal(p => ({ ...p, step: AUTH_STEPS.checkEmail }))
 
-    checkEmailMutation.mutate({
-      data: { email },
-      onSuccess: data => {
-        if (data.is_available) {
-          // proceed to register
-        } else {
-          setAuthModal(p => ({ ...p, step: AUTH_STEPS.login }))
-        }
-      },
-    })
+    // checkEmailMutation.mutate({
+    //   data: { email },
+    //   onSuccess: data => {
+    //     if (data.is_available) {
+    //       // proceed to register
+    //     } else {
+    //       setAuthModal(p => ({ ...p, step: AUTH_STEPS.login }))
+    //     }
+    //   },
+    // })
   }
 
   const { handleLogin, isLoading } = useAuthLogin(email, password)
@@ -65,6 +66,7 @@ export const LoginModal = () => {
               textAlign={TextAlignEnum.Center}
               label='Please enter your password for your account.'
             />
+            <br />
             <Form
               inputs={[
                 {
